@@ -7,38 +7,93 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+<!-- custom css -->
+<link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
+<main class="main-container">
+  <h3 class="main-title">
+    SPIL <br/> 
+    TTER</h3>
 
-  Bill
+    <div class="main-content">
+      <div class="left-container">
+        <div class="bill-section">
+          <div class="heading">
+            <h6>Bill</h6>
+            <h6 class="error-message" id="error-message">can't be negative or zero</h6>
+          </div>
+          <input type="number" class="bill-charge" id="bill-charge" placeholder="0">
+        </div>
 
-  Select Tip %
-  5%
+        <div class="tip-section">
+          <div class="heading">
+            <h6>Select Tip %</h6>
+            <h6 class="error-message" id="tip-error-message">can't be negative
+            </h6>
+          </div>
+          <div class="tip-options">
+            <button class="tip-value" value="5" onClick="tipInput(event)">5%</button>
+            <button class="tip-value" value="10" onClick="tipInput(event)">10%</button>
+            <button class="tip-value" value="15" onClick="tipInput(event)">15%</button>
+            <button class="tip-value" value="25" onClick="tipInput(event)">25%</button>
+            <button class="tip-value" value="50" onClick="tipInput(event)">50%</button>
+            <input type="number"  name = "custom-tip" class="tip-value" id="custom-tip" placeholder="Custom">
+          </div>
+
+        </div>
+
+        <div class="people-section">
+          <div class="heading">
+            <h6>Number of People</h6>
+            <h6 class="error-message" id="people-error-message">
+              can't be negative or zero
+            </h6>
+          </div>
+          <input type="number"  name = "people-count" class="people-count" id="prople-count" placeholder="0">       
+        </div>
+
+      </div>
+      <div class="right-container">
+        <div class="details">
+          <div class="tip-details">
+            <div class="amount-detail">
+              <p class="tip-amount"> <span style="color:white;">Tip Amount</span>  <br />
+                / person</p>
+                <p class="total-amount" id="total-tip-per-person">$0.00 </p>
+            </div>
+          </div>
+          <div class="amount-details">
+            <div class="amount-detail">
+              <p class="tip-amount"> <span style="color: white",> Total Amount</span> <br />
+                / person</p>
+                <p class="total-amount" id="total-amount-per-person">$0.00</p>
+            </div>
+          </div>
+        </div>
+        <button class="reset" id="reset">Reset</button>
+      </div>
+    </div>
+</main>
+  <!-- 
+
+ 
+  
   10%
   15%
   25%
   50%
   Custom
 
-  Number of People
+  
 
   Tip Amount
   / person
 
-  Total
-  / person
-
-  Reset
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+
+  
+   -->
+  <script src="./script/script.js" async></script>
 </body>
 </html>
