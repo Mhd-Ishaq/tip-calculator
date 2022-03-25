@@ -81,6 +81,31 @@ const tipInput = function(event){
     tipPerPerson();
   }
 };
+
+const resetEverything = function(){
+  const inputNodeList = document.getElementsByTagName("input");
+
+  for(const node of inputNodeList){
+    node.value = "";
+  }
+
+  totalBill = 0;
+  tipSelected = 0;
+  totalPeople = 0;
+
+  const buttonNodeList = document.getElementsByTagName("button");
+
+  for(const node of buttonNodeList){
+    if(node.classList.contains("tip-value-active")){
+      node.classList.remove("tip-value-active");
+    }
+  }
+
+  
+  document.getElementById("total-tip-per-person").innerText = "$0.00";
+  document.getElementById("total-amount-per-person").innerText = "$0.00";
+  document.getElementById("error-message").style.display = "none";
+};
   
 
 
