@@ -37,14 +37,14 @@ const tipPerPerson = function(){
 
 // function to get number of people
 
-const peopleCount = function(event){
+const peopleCount = function(){
   totalPeople = Number(document.getElementById("people-count").value);
 
   if(totalPeople <= 0){
-    document.getElementById("bill-error-message").style.display = "block";
+    document.getElementById("people-error-message").style.display = "block";
   }
   else{
-    document.getElementById("bill-error-message").style.display = "none";
+    document.getElementById("people-error-message").style.display = "none";
     tipPerPerson();
   }
   };
@@ -70,14 +70,14 @@ const tipInput = function(event){
   if(tipNode !== undefined){
     tipNode.classList.remove("tip-value-active");
   }
-  event.target.className += "tip-value-active";
+  event.target.className += " tip-value-active";
   tipSelected = Number(event.target.value);
 
   if(tipSelected <= 0){
-    document.getElementById("bill-error-message").style.display = "block";
+    document.getElementById("tip-error-message").style.display = "block";
   }
   else{
-    document.getElementById("bill-error-message").style.display = "none";
+    document.getElementById("tip-error-message").style.display = "none";
     tipPerPerson();
   }
 };
